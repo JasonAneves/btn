@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap ;
+    background: #222;
+    gap: 20px;
+    min-height: 110vh;
+}
+.btn{
+    position: relative;
+    padding: 12px 40px;
+    font-size: 1.05em;
+    border-radius: 40px;
+    background: #2f2f2f;
+    color: green;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.btn:hover{
+    color: #ffffff;
+}
+.btn span{
+    position: absolute;
+    border: 2px solid #ffff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    filter: brightness(6);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    100%{
+        width: 350px;
+        height: 350px;
+    }
+}
